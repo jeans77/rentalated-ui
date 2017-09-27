@@ -14,7 +14,12 @@ error: string;
 selectedApartment: Apartment;
 
   constructor(private data: ApartmentDataService) { }
-    selectApartment(apartment: Apartment) {
+
+
+  hideStuff() {
+      this.selectedApartment = null;
+  }
+      selectApartment(apartment: Apartment) {
       this.selectedApartment = apartment;
     }
 

@@ -6,6 +6,12 @@
   <a (click)="selectApartment(apartment)">{{ apartment.address }}</a>
 
 </div>
+<br>
+
+<button
+  *ngIf="selectedApartment"
+  (click)="hideStuff()">Hide details
+</button>
 
 <app-apartment-detail 
   *ngIf="selectedApartment"

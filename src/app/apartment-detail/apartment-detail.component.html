@@ -1,3 +1,10 @@
-<div>
-  {{ apartment.address }}
-</div>
+<h1>{{apartment.rent | currency}}</h1>
+
+<div>{{ apartment.address }}</div>
+<div>{{ apartment.city }} {{ apartment.state }} {{ apartment.zipCode }}</div>
+
+<ul>
+<li>Square footage: {{ apartment.square_footage}}</li>
+<li>Number of Bedrooms: {{ apartment.number_of_bathrooms}}</li>
+<li>Number of bathrooms: {{ apartment.number_of_bedrooms}}</li>
+</ul>
