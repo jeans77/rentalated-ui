@@ -1,0 +1,11 @@
+<h1>My Listings ...</h1>
+
+<h4>My Active Listings ...</h4>
+<div  *ngFor="let apartment of selectApartments(true)">
+  <a>{{ apartment.address }}</a>
+</div>
+
+<h4>My Inactive Listings ...</h4>
+<div  *ngFor="let apartment of selectApartments(false)">
+  <a>{{ apartment.address }}</a>
+</div>

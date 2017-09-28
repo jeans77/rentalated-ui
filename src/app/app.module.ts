@@ -12,9 +12,11 @@ import { ApartmentDataService } from './apartment-data/apartment-data.service';
 import { SessionDataService } from './session-data/session-data.service';
 import { ApartmentDetailComponent } from './apartment-detail/apartment-detail.component';
 import { LoginComponent } from './login/login.component';
+import { MylistingComponent } from './mylisting/mylisting.component';
 
 const routes: Route[] = [
   { path: 'login', component: LoginComponent },
+  { path: 'api/apartments/mine', component: MylistingComponent },
   { path: '', component: ApartmentListingsComponent }
 
 ];
@@ -26,7 +28,8 @@ const routes: Route[] = [
     NavigationComponent,
     ApartmentListingsComponent,
     ApartmentDetailComponent,
-    LoginComponent
+    LoginComponent,
+    MylistingComponent
   ],
   imports: [
     BrowserModule,

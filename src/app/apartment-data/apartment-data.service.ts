@@ -13,8 +13,13 @@ export class ApartmentDataService {
 
   getActiveListings(): Observable<Apartment[]> {
     return this.http
-      .get('http://localhost:4567/api/apartments')
+      .get('http://localhost:4567/api/apartments', {withCredentials: true})
       .map(response => response.json());
   }
 
+  getMyListings(): Observable<Apartment[]> {
+    return this.http
+      .get('http://localhost:4567/api/apartments/mine', {withCredentials: true})
+      .map(response => response.json());
+  }
 }
