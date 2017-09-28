@@ -22,4 +22,17 @@ export class ApartmentDataService {
       .get('http://localhost:4567/api/apartments/mine', {withCredentials: true})
       .map(response => response.json());
   }
+
+  changeStatus (apartment: Apartment): Observable<Apartment>{
+  
+    if (apartment.is_active) {
+      return this.http
+      .post(`http://localhost:4567/api/apartments/${apartment.id}/activations`, {}, { withCredentials: true })
+      .map(response => response.json());
+    } else {
+      return this.http
+      .post(`http://localhost:4567/api/apartments/${apartment.id}/deactivations`, {}, { withCredentials: true })
+      .map(response => response.json());
+    }
+  }
 }
